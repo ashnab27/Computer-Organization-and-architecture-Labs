@@ -1,0 +1,11 @@
+﻿Task 1: Pseudo vs Actual Control Instructions
+
+beq   - Actual : Base ISA hardware opcode/funct3 implementation.
+bne   - Actual : Base ISA hardware opcode/funct3 implementation.
+blt   - Actual : Base ISA hardware opcode/funct3 implementation.
+bge   - Actual : Base ISA hardware opcode/funct3 implementation.
+ble   - Pseudo : Assembler translates "ble t0, t1, target" -> "bge t1, t0, target" (swaps operands).
+bgt   - Pseudo : Assembler translates "bgt t0, t1, target" -> "blt t1, t0, target" (swaps operands).
+jal   - Actual : Base ISA J-type instruction.
+jalr  - Actual : Base ISA I-type instruction.
+j     - Pseudo : Shorthand for "jal x0, target" (unconditional jump without saving link register).
